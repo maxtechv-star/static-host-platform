@@ -33,7 +33,7 @@
     "adm-zip": "^0.5.10",
     "simple-git": "^3.19.0",
     "validator": "^13.11.0",
-    "nodemailer": "^6.9.7",
+    "nodemailer": "^7.0.7", 
     "@sendgrid/mail": "^7.7.0",
     "next-auth": "^4.24.5",
     "chart.js": "^4.4.0",
@@ -44,8 +44,7 @@
     "uuid": "^9.0.1",
     "crypto-js": "^4.2.0",
     "rate-limiter-flexible": "^5.0.1",
-    "multer": "^1.4.5-lts.1",
-    "express": "^4.18.2",
+    
     "cors": "^2.8.5"
   },
   "devDependencies": {
@@ -57,7 +56,8 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/user-event": "^14.5.0",
-    "supertest": "^6.3.3"
+    "supertest": "^6.3.3",
+    "mongodb-memory-server": "^9.1.4" 
   },
   "engines": {
     "node": ">=18.0.0"
@@ -68,4 +68,4 @@
     "hosting-platform",
     "verondev"
   ]
-}
+  }
