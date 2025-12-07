@@ -1,3 +1,4 @@
+
 {
   "version": 2,
   "builds": [
@@ -33,20 +34,5 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "functions": {
-    "pages/api/sites/*/upload-zip.js": {
-      "maxDuration": 60,
-      "memory": 3008
-    },
-    "pages/api/sites/*/git-clone.js": {
-      "maxDuration": 60,
-      "memory": 3008
-    }
-  },
-  "regions": ["iad1"],
-  "github": {
-    "enabled": true,
-    "silent": true,
-    "autoJobCancelation": true
-  }
+  "regions": ["iad1"]
 }
