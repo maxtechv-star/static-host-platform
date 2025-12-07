@@ -1,0 +1,71 @@
+{
+  "name": "statichost-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Free static-site hosting platform by VeronDev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VeronDev/static-host-platform"
+  },
+  "author": "VeronDev <verondev@example.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext js,jsx",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "vercel-build": "next build",
+    "setup-admin": "node scripts/setup-admin.js"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "mongodb": "^6.0.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "aws-sdk": "^2.1500.0",
+    "@aws-sdk/client-s3": "^3.470.0",
+    "@aws-sdk/s3-request-presigner": "^3.470.0",
+    "busboy": "^1.6.0",
+    "adm-zip": "^0.5.10",
+    "simple-git": "^3.19.0",
+    "validator": "^13.11.0",
+    "nodemailer": "^6.9.7",
+    "@sendgrid/mail": "^7.7.0",
+    "next-auth": "^4.24.5",
+    "chart.js": "^4.4.0",
+    "react-chartjs-2": "^5.2.0",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "uuid": "^9.0.1",
+    "crypto-js": "^4.2.0",
+    "rate-limiter-flexible": "^5.0.1",
+    "multer": "^1.4.5-lts.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/node": "^20.0.0",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "^14.0.0",
+    "jest": "^29.7.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/user-event": "^14.5.0",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "static-hosting",
+    "vercel",
+    "hosting-platform",
+    "verondev"
+  ]
+}

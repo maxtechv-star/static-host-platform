@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1",
+      "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Authorization"
+      }
+    },
+    {
+      "src": "/s/(.*)",
+      "dest": "/api/download/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1",
+      "continue": true
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "pages/api/sites/*/upload-zip.js": {
+      "maxDuration": 60,
+      "memory": 3008
+    },
+    "pages/api/sites/*/git-clone.js": {
+      "maxDuration": 60,
+      "memory": 3008
+    }
+  },
+  "regions": ["iad1"],
+  "github": {
+    "enabled": true,
+    "silent": true,
+    "autoJobCancelation": true
+  }
+}
